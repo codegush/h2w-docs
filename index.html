@@ -1,0 +1,576 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;cURL&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="cURL">cURL</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#requirements" class="toc-h2 toc-link" data-title="requirements">Requirements</a>
+                  </li>
+                  <li>
+                    <a href="#basics" class="toc-h2 toc-link" data-title="basics">Basics</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#login-using-mobile-app-browser-client" class="toc-h2 toc-link" data-title="login-using-mobile-app-browser-client">Login using mobile app/browser client</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user" class="toc-h1 toc-link" data-title="user">User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#registeration" class="toc-h2 toc-link" data-title="registeration">Registeration</a>
+                  </li>
+                  <li>
+                    <a href="#verify-email" class="toc-h2 toc-link" data-title="verify-email">Verify email</a>
+                  </li>
+                  <li>
+                    <a href="#profile" class="toc-h2 toc-link" data-title="profile">Profile</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#reset-password" class="toc-h1 toc-link" data-title="reset-password">Reset password</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="create">Create</a>
+                  </li>
+                  <li>
+                    <a href="#update" class="toc-h2 toc-link" data-title="update">Update</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='http://hate2wait.io'>hate2wait Homepage</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the hate2wait API! Use this API to manage a queue or clients using hate2wait QMS.</p>
+
+<p>You can view code examples in the dark area to the right.</p>
+
+<p>Most hate2wait API endpoints require an API key in the HTTP header with each request. See Authentication on how to get your a API key.</p>
+<h2 id='requirements'>Requirements</h2>
+<p>You need an account with hate2wait to use this API. Please sign up on the hate2wait Dashboard</p>
+
+<p>Your queue management system needs to be able to send HTTP requests to hate2wait via the internet to update information about your waitlist (like estimated wait time, services, locations, online availability etc.)</p>
+<h2 id='basics'>Basics</h2>
+<p>The hate2wait API V2 is a completely RESTful. Requests to and responses from the API are formatted as JSON following the recommendations of the of the <a href="http://jsonapi.org/">JSON API specification</a>.</p>
+<h1 id='authentication'>Authentication</h1>
+<aside class="notice">
+You will need to set an AUTHORIZATION header with almost every request to this API. A few endpoints allow unauthenticated access or (like registering user, creating user sessions etc.) might expect special tokens.
+</aside>
+
+<p>Obtain an API key by calling a login endpoint (see below). If successful, the response will contain a token string.</p>
+
+<p>Once you have a token, set the HTTP header named AUTHORIZATION: Bearer [token] when you call another endpoint. This will work until the expiry time(determined by admin). At that time, you&#39;ll need to call a login endpoint again to obtain a new token.</p>
+
+<p><code>Authorization: Bearer [token]</code></p>
+<h2 id='login-using-mobile-app-browser-client'>Login using mobile app/browser client</h2>
+<blockquote>
+<p>Authenticated request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.hate2wait.io/api/v1/login'</span> <span class="se">\</span>
+     -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+     -X POST -d @- <span class="sh">&lt;&lt; EOF
+{
+  "email": "[email]",
+  "password": "[password]"
+}
+EOF
+</span></code></pre>
+<blockquote>
+<p>Response format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  token: <span class="o">[</span>token]
+<span class="o">}</span>
+</code></pre>
+<p>This endpoint does not require a token itself.</p>
+
+<p>hate2wait uses API token to allow access to the API. You need to sign up for an account at Administration Dashboard in order to use the Login Dashboard User endpoint.</p>
+
+<p>This endpoint does not require an API key itself.</p>
+
+<p>It returns the created token as a JSON hash.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>Your email address</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Your password</td>
+</tr>
+</tbody></table>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://api.hate2wait.io/api/v1/login</code></p>
+<h1 id='user'>User</h1>
+<p>User is an entity, who uses this application and can have server roles based on access given.</p>
+<h2 id='registeration'>Registeration</h2>
+<blockquote>
+<p>Authenticated request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.hate2wait.io/api/v1/users'</span> <span class="se">\</span>
+     -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+     -X POST -d @- <span class="sh">&lt;&lt; EOF
+{
+  "name": "[name]",
+  "email": "[email]",
+  "password": "[password]",
+  "password_confirmation": "[password_confirmation]"
+}
+EOF
+</span></code></pre>
+<blockquote>
+<p>Response format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{}</span>
+</code></pre>
+<p>This endpoint does not require a token itself. It is used for registering a new user with name, email and password.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Your name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Your email address</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Password</td>
+</tr>
+<tr>
+<td>password_confirmation</td>
+<td>Repeat the same password</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://api.hate2wait.io/api/v1/users</code></p>
+<h2 id='verify-email'>Verify email</h2>
+<p>This endpoint will be used from user&#39;s email to verify the account.</p>
+
+<blockquote>
+<p>Authenticated request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.hate2wait.io/api/v1/users/verify_email'</span> <span class="se">\</span>
+     -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+     -X GET -d @- <span class="sh">&lt;&lt; EOF
+{
+  "email": "[email]",
+  "email_verification_token": "[email_verification_token]"
+}
+EOF
+</span></code></pre>
+<blockquote>
+<p>Response format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>The response will issue a redirection to the requesting client.
+</code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>email_verification_token</td>
+<td>Email verification token</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://api.hate2wait.io/api/v1/verify_email</code></p>
+<h2 id='profile'>Profile</h2>
+<p>This endpoint will return logged in user&#39;s profile</p>
+
+<blockquote>
+<p>Authenticated request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.hate2wait.io/api/v1/users/profile'</span> <span class="se">\</span>
+     -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+     -H <span class="s1">'AUTHORIZATION: Bearer [token]'</span> <span class="se">\</span>
+     -X GET -d @- <span class="sh">&lt;&lt; EOF
+EOF
+</span></code></pre>
+<blockquote>
+<p>Response format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"id"</span>: <span class="s2">"id"</span>,
+  <span class="s2">"name"</span>: <span class="s2">"name"</span>,
+  <span class="s2">"email"</span>: <span class="s2">"email"</span>,
+  <span class="s2">"phone_number"</span>: <span class="s2">"phone_number"</span>
+<span class="o">}</span>
+</code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://api.hate2wait.io/api/v1/profile</code></p>
+<h1 id='reset-password'>Reset password</h1><h2 id='create'>Create</h2>
+<p>This endpoint will do an email to the user, who want&#39;s to reset his account password.</p>
+
+<blockquote>
+<p>Authenticated request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.hate2wait.io/api/v1/users/profile'</span> <span class="se">\</span>
+     -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+     -X POST -d @- <span class="sh">&lt;&lt; EOF
+{
+  "email": "[email]"
+}
+EOF
+</span></code></pre>
+<blockquote>
+<p>Response format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{}</span>
+</code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST https://api.hate2wait.io/api/v1/password_resets</code></p>
+<h2 id='update'>Update</h2>
+<p>This endpoint will get active when a user tries to reset password from app/desktop client.</p>
+
+<blockquote>
+<p>Authenticated request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.hate2wait.io/api/v1/users/profile'</span> <span class="se">\</span>
+     -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+     -X PUT -d @- <span class="sh">&lt;&lt; EOF
+{
+  "email": "[email]",
+  "reset_token": "[reset_token]",
+  "password": "[password]",
+  "password_confirmation": "[password_confirmation]",
+}
+EOF
+</span></code></pre>
+<blockquote>
+<p>Response format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{}</span>
+</code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>PUT https://api.hate2wait.io/api/v1/password_resets</code></p>
+<h1 id='errors'>Errors</h1>
+<p>We highly recommend to log the response body when a response with a HTTP status code &gt;= 400 is returned.</p>
+
+<p>In the case of an error the response will include a human readable error message (see right).</p>
+
+<p>The hate2wait API uses the following error codes.</p>
+
+<blockquote>
+<p>Example error message</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"errors"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"status"</span>: <span class="s2">"404"</span>,
+      <span class="s2">"code"</span>: <span class="s2">"not-found"</span>,
+      <span class="s2">"title"</span>: <span class="s2">"404 (not found)"</span>,
+      <span class="s2">"detail"</span>:<span class="s2">"Couldn't find Line with 'id'=1"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="cURL">cURL</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
